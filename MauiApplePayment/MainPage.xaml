@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApplePayment.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Shadow
+                x:Key="CommonShadow"
+                Brush="Black"
+                Opacity="0.1"
+                Radius="20"
+                Offset="10,10" />
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Apple Payment with MAUI"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Border
+                Padding="4"
+                WidthRequest="250"
+                HorizontalOptions="Center"
+                BackgroundColor="LightGray"
+                Shadow="{StaticResource CommonShadow}"
+                Stroke="{StaticResource Gray100}"
+                StrokeShape="RoundRectangle 15"
+                StrokeThickness="1">
+                <ImageButton
+                    x:Name="CounterBtn"
+                    HeightRequest="40"
+                    Source="applepayment.png"
+                    Clicked="OnApplePayClicked"
+                    HorizontalOptions="Center" />
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
